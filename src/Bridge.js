@@ -103,11 +103,11 @@ function Bridge()
         const handleWalletSelect = (val) => {
             setWhichWalletSelected(val)
         }
-        addEventListener("WalletSelect", handleWalletSelect);
+        addEventListener("WalletSelect", handleWalletSelect)
         return () => {
-          removeEventListener("WalletSelect", handleWalletSelect);
+          removeEventListener("WalletSelect", handleWalletSelect)
         };
-    }, [addEventListener, removeEventListener]);
+    }, [addEventListener, removeEventListener])
 
     function setAssets(assetMetadata) {
         console.log('Setting Assets: ', assetMetadata)
@@ -116,7 +116,7 @@ function Bridge()
 
     function setWalletAddress(address) {
         console.log('Setting Wallet Address: ', address)
-        sendMessage("Bridge", "SetWalletAdress", address)
+        sendMessage("Bridge", "SetWalletAddress", address)
     }
 
     useEffect(() => {
